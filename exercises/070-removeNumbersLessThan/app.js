@@ -5,4 +5,12 @@ var obj = {
 }
 function removeNumbersLessThan(num, obj) {
     // your code here
+    Object.entries(obj).forEach(([key,value])=>{
+        if (value < num){
+            delete obj[key]
+        
+        }
+    })
+    return obj
 }
+console.log(removeNumbersLessThan(5,obj))

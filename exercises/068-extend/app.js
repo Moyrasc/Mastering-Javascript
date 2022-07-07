@@ -9,4 +9,11 @@ var obj2 = {
 
 function extend(obj1, obj2) {
     // your code here
-}
+    Object.entries(obj2).forEach(([key,value])=>{
+        if(!obj1[key]){
+            obj1[key] = value
+        }
+    });
+    return obj1
+  }
+  console.log(extend(obj1,obj2))
