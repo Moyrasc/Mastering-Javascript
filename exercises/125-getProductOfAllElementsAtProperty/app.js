@@ -3,7 +3,17 @@ var obj = {
 };
 
 function getProductOfAllElementsAtProperty(obj, key) {
-    // your code here
+       // your code here
+       if ((typeof obj[key] != "undefined") && (Array.isArray(obj[key]) && obj[key].length>0))
+       {
+         let prod =1
+         for (let elem in obj[key])
+         {
+           prod *= obj[key][elem]
+         }
+         return prod
+       }
+     else return 0
 }
-var output = getProductOfAllElementsAtProperty(obj, 'key');
+let output = getProductOfAllElementsAtProperty(obj, 'key');
 console.log(output); // --> 24
