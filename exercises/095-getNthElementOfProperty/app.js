@@ -8,7 +8,7 @@
     const getNthElementOfProperty = (obj,key,n) =>{
         
         let arr = obj[key];
-        console.log(arr)
+        
         if(arr === undefined || arr.length < 1 || n >= arr.length || !Array.isArray(arr)) {
             return undefined
         }
