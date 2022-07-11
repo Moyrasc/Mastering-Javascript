@@ -1,5 +1,13 @@
 function flipPairs(input){
     // your code here
+    input = input.split("");
+    for (let i = 0; i < input.length; i += 2){
+        let temp = input[i];
+        input[i] = input[i+1];
+        input[i+1] = temp;
+    }
+    input = input.join("");
+    return input
 }
 
 var input = 'check out how interesting this problem is, it\'s insanely interesting!';
