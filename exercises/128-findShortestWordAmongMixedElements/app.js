@@ -1,5 +1,19 @@
-function findShortestWordAmongMixedElements(arr) {
+const findShortestWordAmongMixedElements =(arr) => {
     // your code here
+    let result =""
+    let short = 1000
+    for (let i =0; i<arr.length; i++)
+    {
+      if (typeof arr[i] === "string")
+      {
+        if(arr[i].length <short)
+        {
+          short = arr[i].length
+          result = arr[i]
+        }
+      } 
+    }
+      return result
 }
-var output = findShortestWordAmongMixedElements([4, 'two', 2, 'three']);
+let output = findShortestWordAmongMixedElements([4, 'two', 2, 'three']);
 console.log(output); // --> 'two'
